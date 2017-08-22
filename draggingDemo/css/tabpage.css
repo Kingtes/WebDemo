@@ -1,0 +1,21 @@
+.area-sub{width:100%;overflow:hidden;/*background: #ffffff;*/margin-bottom: 25px;}
+.area-sub .tab-bd{/*min-height: 433px;*/ /*padding: 10px 10px 20px;*/}
+.ui-style-gradient{/* border-top:1px solid #dfdfdf; */}
+.ui-style-gradient .tab-hd,.ui-style-gradient .box-hd{/*background:#F7F7F7;*/}
+.ui-style-gradient .tab-hd-con,.ui-style-gradient .box-hd{background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(254, 254, 254)), to(rgb(237, 237, 237)));background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));background-image: -moz-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));background-image: -o-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));background-image: -ms-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));background-image: linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));}
+.tab-hd-con{float:left;font-size:14px;text-align:center;cursor:pointer;}
+.tab-hd-con a{display:inline-block;color:#ffffff;width: 99%;}
+.tab-bd-con .current{
+    display: block;
+}
+.tab-hd .current{font-weight:500;}
+.tab-bd-con{display:none;/*overflow:hidden;*/}
+.tab-product .tab-hd,.tab-area .tab-hd{overflow:hidden;height:33px;line-height:33px;}
+#layout-product .tab-hd{}
+.tab-product .tab-hd-con,.tab-area .tab-hd-con{height:33px;/*border-right:1px solid #CFCFCF;border-top: 1px solid #CFCFCF;*/display: inline-block;width: 140px;background: #000000;}
+.tab-product .tab-hd .current,.tab-area .tab-hd .current{position:relative;z-index:1;height:33px;background:#fff;display: inline-block;width: 140px;background: #009ec3;}
+#layout-product .tab-hd .current{background: #009ec3;}
+.tab-hd .current a{color: #ffffff;}
+.tab-product .tab-bd,.tab-area .tab-bd{/*margin-top:-1px;border-top:1px solid #CFCFCF;*/}
+.tab-product .tab-bd,.box-sub .box-bd{/*border-right:1px solid #454545;*/border-bottom:1px solid #454545;border-left:1px solid #454545;background: #131313;}
+#layout-curday .tab-hd, #layout-product .tab-hd{border-bottom: 2px solid #009ec3;}

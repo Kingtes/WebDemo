@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <link href="../js/lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/lib/css/jquery.marquee.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+   <!-- <link href="../css/animate.css" rel="stylesheet">-->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/tabpage.css" rel="stylesheet">
+    <style>
+        /*拖动窗口*/
+        .dragging-label{
+            float: left;
+            width: 10px;
+            margin-left: -5px;
+            height: 100%;
+            position: absolute;
+            cursor: e-resize;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+
+    <div id="page-wrapper">
+        <div class="row wrapper" id="topRow">
+            <div class="col-lg-2 padding-left padding-right">
+                <!--资金情况-->
+                <div class="area-sub">
+                    <div id="layout-money" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con current"><a href="javascript:">demo</a></span>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!--资金情况-->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title"></div>
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-money">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label class="dragging-label"></label>
+            <div class="col-lg-4 padding-left padding-right">
+                <div class="area-sub">
+                    <div id="layout-chart" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!-- 日K线图走势图 -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="text-center ibox-title-img">
+                                        <div class="padding-lr8">
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div id="K-container" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                            <!-- 日内分时走势 -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="text-center ibox-title-img">
+                                        <div class="padding-lr8">
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div id="line-container" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <label class="dragging-label"></label>
+            <div class="col-lg-3 padding-left padding-right">
+                <div class="area-sub">
+                    <div id="layout-hq" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="ibox-title-img">
+                                        <div class="padding-lr8">
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-money">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="ibox-title-img">
+                                        <div class="padding-lr8">
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <table class="table table-hq">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label class="dragging-label"></label>
+            <div class="col-lg-3 padding-left padding-right">
+                <div class="area-sub">
+                    <div id="layout-trade" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <input id="box-submit" type="checkbox" name="" checked><label for="box-submit">demo</label>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!-- 指价交易 -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="ibox-title">
+                                        <div class="ibox-title-img">
+                                            <div class="padding-lr8">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="ibox-inner">
+                                        <form class="form-horizontal" role="form">
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 快捷交易 -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-title">
+                                    <div class="ibox-title">
+                                        <div class="ibox-title-img">
+                                            <div class="padding-lr8">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i> demo
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="ibox-inner">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ibox-inner-top">
+                                                <div class="col-sm-offset-2 col-sm-4"><span class="ibox-inner-proNO">demo</span></div>
+                                                <div class="col-sm-4"><span class="ibox-inner-proText">demo</span></div>
+                                            </div>
+                                            <div class="form-group ibox-inner-center">
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wrapper" id="bottomRow">
+            <div class="col-lg-5 padding-left padding-right">
+                <div class="area-sub">
+                    <div id="layout-curday" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                            <span class="tab-hd-con"><a href="javascript:">demo</a></span>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-hover table-curday">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-hover table-curday">
+                                       
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-hover table-curday">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label class="dragging-label"></label>
+            <div class="col-lg-7 padding-left padding-right">
+                <!--demo-->
+                <div class="area-sub">
+                    <div id="layout-product" class="tab-product tab-sub-3 ui-style-gradient">
+                        <div class="tab-hd">
+                            <span class="tab-hd-con current"><a href="javascript:">demo</a></span>
+                        </div>
+                        <div class="tab-bd dom-display">
+                            <!-- demo -->
+                            <div class="tab-bd-con">
+                                <div class="ibox-content">
+                                    <table class="table table-striped table-bordered table-hover table-product">
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="../js/lib/jquery-2.1.1.js"></script>
+<script src="../js/lib/bootstrap.min.js"></script>
+<!--marquee-->
+<script src="../js/lib/jquery.marquee.min.js"></script>
+<!--page scripts-->
+<script src="../js/common/inform.js"></script>
+<script src="../js/tab-switch.js"></script>
+<script src="../js/head-main.js"></script>
+<script src="../js/side-toolbar.js"></script>
+<script src="../js/dragging.js"></script>
+<script src="../js/index.js"></script>
+
+<script>
+    $(function(){
+        //初始化拖拽窗口
+        $("#topRow").dragging({
+            minWidth: '310'//窗口最小宽度
+        });
+        $("#bottomRow").dragging({
+            minWidth: '600'//窗口最小宽度
+        });
+    })
+</script>
+</body>
+</html>
